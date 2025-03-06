@@ -1,77 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLACKSTORE - Loja Online</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Barbearia Vikings</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS externo -->
+    <script>
+        function mostrarPagina(pagina) {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("catalogo").style.display = "none";
+            document.getElementById("login").style.display = "none";
+            document.getElementById(pagina).style.display = "block";
+        }
+
+        function validarLogin(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            var usuario = document.getElementById("username").value;
+            var senha = document.getElementById("password").value;
+
+            if (usuario === "admin" && senha === "1234") {
+                alert("Login bem-sucedido! Redirecionando...");
+                window.location.href = "dashboard.html"; // Redirecionamento
+            } else {
+                alert("Usuário ou senha incorretos!");
+            }
+        }
+    </script>
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <div class="logo">BLACKSTORE</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar produtos...">
-        </div>
-        <div class="menu">
-            <a href="#" onclick="mostrarAba('login')">Login</a>
-            <a href="#" onclick="mostrarAba('carrinho')">Carrinho</a>
-        </div>
-    </header>
+    <nav>
+        <a href="#" onclick="mostrarPagina('home')">Início</a>
+        <a href="#" onclick="mostrarPagina('catalogo')">Catálogo</a>
+        <a href="#" onclick="mostrarPagina('login')">Login</a>
+    </nav>
 
-    <!-- BANNER PRINCIPAL -->
-    <div class="banner">
-        <h1>Shop Prime Big Deal Days</h1>
-        <p>Os melhores descontos para você!</p>
-    </div>
-
-    <!-- ÁREAS DE CONTEÚDO (LOGIN E CARRINHO) -->
-    <div id="login" class="aba" style="display: none;">
-        <h2>Área de Login</h2>
-        <p>Aqui vai o formulário de login...</p>
-    </div>
-
-    <div id="carrinho" class="aba" style="display: none;">
-        <h2>Seu Carrinho</h2>
-        <p>Seus produtos aparecerão aqui...</p>
-    </div>
-
-    <!-- CATEGORIAS -->
-    <div class="categorias">
-        <div class="categoria">
-            <img src="https://via.placeholder.com/250" alt="Blackstore Devices">
-            <h3>Blackstore Devices</h3>
-        </div>
-        <div class="categoria">
-            <img src="https://via.placeholder.com/250" alt="Blackstore Fashion">
-            <h3>Blackstore Fashion</h3>
-        </div>
-        <div class="categoria">
-            <img src="https://via.placeholder.com/250" alt="Smart Home">
-            <h3>Smart Home</h3>
-        </div>
-        <div class="categoria">
-            <img src="https://via.placeholder.com/250" alt="Blackstore Basics">
-            <h3>Blackstore Basics</h3>
+    <div id="home" class="container">
+        <h1>⚔️ BARBEARIA VIKINGS ⚔️</h1>
+        <h2>ONDE GUERREIROS SÃO TRANSFORMADOS</h2>
+        <p>Entre o aço das lâminas e o espírito dos antigos guerreiros, <span class="highlight">forjamos não apenas cortes e barbas</span>, mas a essência dos verdadeiros Vikings.</p>
+        <p>Aqui, cada homem que cruza nossas portas sai renovado, mais forte e preparado para enfrentar suas batalhas diárias.</p>
+        <div class="info">
+            <p>📍 <strong>Endereço:</strong> Centro de Curitiba</p>
+            <p>📞 <strong>Chamado à batalha:</strong> (41) 98443-9757</p>
+            <p>⏳ <strong>Horário de serviço:</strong> Segunda a sexta-feira</p>
         </div>
     </div>
 
-    <!-- RODAPÉ -->
-    <footer>
-        &copy; 2025 BLACKSTORE - Todos os direitos reservados
-    </footer>
+    <div id="catalogo" class="container" style="display:none;">
+        <h1>CATÁLOGO DE CORTES - BARBEARIA VIKINGS ⚔️</h1>
 
-    <!-- SCRIPT PARA TROCAR ENTRE AS ABAS -->
-    <script>
-        function mostrarAba(aba) {
-            // Esconde todas as abas
-            document.querySelectorAll('.aba').forEach(div => div.style.display = 'none');
-            
-            // Mostra a aba clicada
-            document.getElementById(aba).style.display = 'block';
-        }
-    </script>
+        <div class="corte">
+            <h2>⚔️ Corte Ragnar - <span class="preco">R$ 50,00</span></h2>
+            <p>Raspar as laterais e deixar o topo volumoso, um clássico dos reis guerreiros.</p>
+        </div>
+
+        <div class="corte">
+            <h2>⚔️ Corte Bjorn - <span class="preco">R$ 55,00</span></h2>
+            <p>Laterais degradê com topo alongado e textura selvagem, ideal para líderes audaciosos.</p>
+        </div>
+
+        <div class="corte">
+            <h2>⚔️ Corte Fenrir - <span class="preco">R$ 60,00</span></h2>
+            <p>Corte longo e repicado, inspirado nos guerreiros de batalha que usavam os cabelos ao vento.</p>
+        </div>
+    </div>
+
+    <div id="login" class="login-container" style="display:none;">
+        <h1>⚔️ LOGIN ⚔️</h1>
+        <form onsubmit="validarLogin(event)">
+            <input type="text" id="username" placeholder="Nome de Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="link">
+            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </div>
 
 </body>
 </html>

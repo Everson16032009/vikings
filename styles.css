@@ -1,0 +1,133 @@
+/* Estilos gerais do site */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilização do container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5em;
+    color: #c49a6c;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+/* Texto e parágrafos */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #c49a6c;
+    font-weight: bold;
+}
+
+/* Menu de navegação */
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #c49a6c;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo dos cortes */
+.corte {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.corte:last-child {
+    border-bottom: none;
+}
+
+.preco {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Estilo do login */
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    display: none;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    background-color: #333;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* Botão */
+button {
+    background-color: #c49a6c;
+    color: #1b1b1b;
+    font-size: 1.2em;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #a07c50;
+}
+
+/* Links */
+.link {
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+.link a {
+    color: #c49a6c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}

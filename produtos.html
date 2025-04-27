@@ -3,17 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - Barbearia Vikings</title>
+    <title>Início - Barbearia Vikings</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="produtos.css">
+    <script>
+        function mostrarPagina(pagina) {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("catalogo").style.display = "none";
+            document.getElementById("login").style.display = "none";
+            document.getElementById(pagina).style.display = "block";
+        }
+
+        function validarLogin(event) {
+            event.preventDefault();
+
+            var usuario = document.getElementById("username").value;
+            var senha = document.getElementById("password").value;
+
+            if (usuario === "admin" && senha === "1234") {
+                alert("Login bem-sucedido! Redirecionando...");
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Usuário ou senha incorretos!");
+            }
+        }
+    </script>
 </head>
 <body>
+
     <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Catálogo</a>
+        <a href="#" onclick="mostrarPagina('home')">INICIO</a>
+        <a href="#" onclick="mostrarPagina('catalogo')">CATÁLOGO</a>
+        <a href="#" onclick="mostrarPagina('login')">LOGIN</a>
     </nav>
-    
-    <div class="container">
+
+    <div id="home" class="container">
+
+        <h1>⚔️ BARBEARIA VIKINGS ⚔️</h1>
+        <h2>ONDE GUERREIROS SÃO TRANSFORMADOS</h2>
+        <p>Entre o aço das lâminas e o espírito dos antigos guerreiros, <span class="highlight">forjamos não apenas cortes e barbas</span>, mas a essência dos verdadeiros Vikings.</p>
+        <p>Aqui, cada homem que cruza nossas portas sai renovado, mais forte e preparado para enfrentar suas batalhas diárias.</p>
+        <div class="info">
+            <p>📍 <strong>Endereço:</strong> Centro de Curitiba</p>
+            <p>📞 <strong>Chamado à batalha:</strong> (41) 98443-9757</p>
+            <p>⏳ <strong>Horário de serviço:</strong> Segunda a sexta-feira</p>
+            <p><img src="https://i.imgur.com/tV97tOL.png" style="width: 50%; height: auto;"></p>
+        </div>
+    </div>
+
+    <div id="catalogo" class="container" style="display:none;">
         <h1>CATÁLOGO DE CORTES - BARBEARIA VIKINGS ⚔️</h1>
 
         <div class="corte">
@@ -31,5 +68,18 @@
             <p>Corte longo e repicado, inspirado nos guerreiros de batalha que usavam os cabelos ao vento.</p>
         </div>
     </div>
+
+    <div id="login" class="login-container" style="display:none;">
+        <h1>⚔️ VIKINGS ⚔️</h1>
+        <form onsubmit="validarLogin(event)">
+            <input type="text" id="username" placeholder="Nome de Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="link">
+            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </div>
+
 </body>
 </html>

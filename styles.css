@@ -131,3 +131,29 @@ button:hover {
 .link a:hover {
     text-decoration: underline;
 }
+.produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .produto-imagem {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  .produto-info h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .produto-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+  }
+  

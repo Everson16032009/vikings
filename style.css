@@ -1,0 +1,40 @@
+:root{
+  --bg: #1f2122;
+  --panel: #2b2d2f;
+  --muted: #bfbfbf;
+  --accent: #ff6a00;
+  --white: #ffffff;
+  --container-width: 1000px;
+  --radius: 10px;
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-sans);color:var(--muted);background:var(--bg);line-height:1.5}
+.container{width:90%;max-width:var(--container-width);margin:0 auto;padding:30px 0}
+.site-header{background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15));border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:2px;color:var(--accent);font-size:28px}
+.logo-img{height:45px;width:auto}
+.nav{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+.nav a{color:var(--muted);text-decoration:none;font-weight:700;letter-spacing:1px}
+.nav a.active,.nav a:hover{color:var(--white)}
+.hero{padding:70px 0;text-align:center}
+.hero h1{color:var(--accent);font-size:42px;margin-bottom:10px;letter-spacing:2px}
+.lead{color:var(--muted);max-width:800px;margin:0 auto;font-size:18px}
+.sobre h2,.cortes h2{color:var(--white);font-size:30px;margin-bottom:18px}
+.sobre p{color:var(--muted);font-size:16px;line-height:1.6}
+.cortes .corte-row{display:flex;gap:28px;align-items:flex-start;margin-bottom:36px;background:var(--panel);padding:18px;border-radius:8px;box-shadow:0 6px 14px rgba(0,0,0,0.4)}
+.corte-img{width:220px;height:220px;object-fit:cover;border-radius:6px;flex-shrink:0;border:4px solid rgba(0,0,0,0.25)}
+.corte-info h3{margin:0 0 8px 0;color:var(--white);font-size:22px;letter-spacing:1px}
+.corte-info p{margin:6px 0;color:var(--muted)}
+.price{margin-top:12px;color:var(--accent);font-weight:800;font-size:20px}
+.login-page .login-main{display:flex;align-items:center;justify-content:center;min-height:70vh;padding:40px 0}
+.login-card{width:360px;background:var(--panel);padding:26px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.6);text-align:left}
+.login-card h2{color:var(--white);margin:0 0 12px 0}
+.login-card label{display:block;color:var(--muted);margin:10px 0 6px;font-weight:700;font-size:13px}
+.login-card input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:var(--white);outline:none}
+.btn-primary{margin-top:14px;width:100%;padding:12px 14px;border-radius:8px;border:0;background:linear-gradient(180deg,var(--accent),#e25a00);color:var(--white);font-weight:800;cursor:pointer;letter-spacing:1px}
+.btn-primary:hover{filter:brightness(0.95)}
+.site-footer{background:transparent;padding:18px 0 30px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+@media(max-width:900px){.corte-row{flex-direction:column;align-items:center;text-align:center}.corte-img{width:100%;height:320px;max-height:360px}.corte-info h3{font-size:20px}.header-inner{flex-direction:column;gap:12px}.nav{gap:14px;flex-wrap:wrap;justify-content:center}}
+@media(max-width:420px){.hero h1{font-size:30px}.login-card{width:94%;padding:18px}}

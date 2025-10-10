@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VIKINGS - Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body class="login-page">
+  <header class="site-header small">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="img/logo1.png" alt="Logo Vikings" class="logo-img">
+        <span>VIKINGS</span>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">SOBRE</a></li>
+          <li><a href="cortes.html">CORTES</a></li>
+          <li><a class="active" href="login.html">LOGIN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-main">
+    <div class="login-card">
+      <h2>Entrar — Vikings</h2>
+      <form onsubmit="event.preventDefault(); alert('Este é um mock de login para trabalho escolar.');">
+        <label for="user">Usuário</label>
+        <input id="user" type="text" placeholder="Seu usuário" required />
+
+        <label for="pass">Senha</label>
+        <input id="pass" type="password" placeholder="Sua senha" required />
+
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+      <p  class="small-note">      mock para apresentação.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 VIKINGS - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
